@@ -157,6 +157,8 @@ sub gen_bind_zone_from_powerdns_db {
             push @res, "AAAA $rec->{content}\n";
 	} elsif ($type eq 'AFSDB') {
             push @res, "AFSDB $rec->{content}\n";
+	} elsif ($type eq 'ALIAS') {
+            push @res, "ALIAS $rec->{content}\n";
 	} elsif ($type eq 'APL') {
             push @res, "APL $rec->{content}\n";
 	} elsif ($type eq 'AXFR') {
